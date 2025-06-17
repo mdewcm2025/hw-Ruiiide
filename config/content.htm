@@ -109,6 +109,12 @@
 <p>Vmware<span> </span><a href="https://blogs.vmware.com/cloud-foundation/2024/11/11/vmware-fusion-and-workstation-are-now-free-for-all-users/">最近宣布</a>適用於 Windows 及 Linux 的 Vmware Workstation Pro (<a href="https://docs.vmware.com/en/VMware-Workstation-Pro/17.6/rn/vmware-workstation-176-pro-release-notes/index.html">17.6</a>), 與適用於 MacOS 的 Vmware Fusion Pro 全面免費.</p>
 <p><a href="https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware+Workstation+Pro">下載 Vmware Workstation Pro</a><span> </span>(For Windows and Linux) - 註冊帳號後下載 VMware-workstation-full-17.6.2.exe</p>
 <p><a href="https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware+Fusion">下載 Vmware Fusion Pro</a><span> </span>(For Mac) - 註冊帳號後下載</p>
+<h3>Steps</h3>
+<p>純 IPv6 位址設定</p>
+<p>採<a href="https://mdewcm2025.github.io/hw-scrum-1/downloads/1_ipv6_network_setup.bat_.txt">批次檔案</a>、<a href="https://mdewcm2025.github.io/hw-scrum-1/downloads/1_2022_cadlab_network_setup.reg_.txt">登錄檔案</a>與<span> </span><a href="https://mdewcm2025.github.io/hw-scrum-1/downloads/1_disable_ipv4.ps1_.txt">powershell 指令檔案</a>, 結合所<a href="https://mde.tw/wcm2025/content/IPv6.html">分配的 IPV6 網路位址</a>設定電腦, 以管理者身分執行 1_ipv6_network_setup.bat 後, 即可關閉 IPv4, 設定各自的 IPv6 位址, 並且讓瀏覽器可以利用代理主機連線到 IPv4 網站. (必須修改 <a href="https://mdewcm2025.github.io/hw-scrum-1/downloads/1_disable_ipv4.ps1_.txt">powershell 指令檔案</a> 中的  $ipv6Address = "2001:288:6004:17:fff1:cc25:0000:a0xx" 資料, 將 xx 改為自己的序號.</p>
+<p>設定完成後以 ipconfig /all 檢查 IPv6 網址是否已經綁定</p>
+<p>取得 IPv6 位置與符號名稱的認證對應</p>
+<p>若希望透過<span> </span><a href="https://letsencrypt.org/">LetsEncrypt</a><span> </span>進行符號名稱認證, 必須下載<span> </span><a href="http://229.cycu.org/certbot.7z">certbot.7z</a>, 然後在命令列視窗, 以管理者身分執行 certbot certonly --standalone</p>
 <h2>HW2</h2>
 <p>作業二 (20%): 在各種不同環境下的操作系統中配置<span> </span><a href="https://mde.tw/reeborg/world.html">Reeborg's world</a> (<a href="https://github.com/mdecycu/reeborg">原始碼</a>)</p>
 <p>在 HW1 所建立的各種 nginx 伺服器與個人網站中配置 Reeborg 機器人程式, 並將所練習的 Python 程式放入網站的 downloads 目錄中, 逐步強化練習個人的 Python 程式語法. 並隨著各式課程的學習, 嘗試利用網際程式方法解題.</p>
